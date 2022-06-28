@@ -1,0 +1,43 @@
+.container{
+        width: 100%;
+        background: green;
+}
+
+
+.table{border-collapse: collapse; text-align: center;}
+        .table 
+        td { 
+                border: 1px solid black;
+                padding: 5px;
+        }
+
+.form_continer{
+        border: 1px solid black;
+        border-radius: 9px;
+        margin-bottom:50px;
+        width: 50%;
+        margin: auto;
+        padding: auto;
+}
+.form_table{
+        margin: 50px auto;
+        text-align:center;
+}
+
+.text-center{
+        text-align:center;
+}
+
+.imput_total{
+        width:100%;
+}
+
+.columna{
+        float: left;
+        width: 50%;
+        background: pink;
+}
+        
+
+
+
