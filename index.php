@@ -258,7 +258,7 @@
         <table class= "table">
             <thead>
                 <tr>
-                    <td colspan="2">Listado de planessssssssss</td>
+                    <td colspan="2">Listado de planes</td>
                 </tr>
             </thead>
             
