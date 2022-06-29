@@ -1,6 +1,6 @@
 .container{
         width: 100%;
-        background: green;
+        
 }
 
 
@@ -35,7 +35,7 @@
 .columna{
         float: left;
         width: 50%;
-        background: pink;
+       
 }
         
 

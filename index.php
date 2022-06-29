@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Netflix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <style>
          .container{
             float: left;
@@ -30,13 +31,23 @@
         if($db){
             $sql="INSERT INTO clientes (nombre, apellido, cedula, pais, genero) VALUES ('$nombre', '$apellido', '$cedula', '$pais', '$genero')";
             $insert_cliente= mysql_query($sql);
-            echo $sql;
+            
 
 
             if($insert_cliente){
-                echo"<script>alert('Cliente registrado con exito')</script>";
+                ?>
+                <div class="alert alert-success" role="alert">
+                <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-target="#my-alert" aria-label="Close"></button>
+                Cliente registrado con exito!
+                </div>
+                <?php
             }else{
-                echo"<script>alert('Error al registrar al cliente')</script>";
+                ?>
+                <div class="alert alert-dismissible alert-danger" role="alert">
+                Error al registrar el cliente.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-target="#my-alert" aria-label="Close"></button>
+                </div>
+                <?php
             }
         }
         
@@ -50,13 +61,23 @@
         if($db){
             $sql="INSERT INTO planes (nombre_plan, precio) VALUES ('$plan', $precio)";
             $insert_plan= mysql_query($sql);
-            echo $sql;
+
 
 
             if($insert_plan){
-                echo"<script>alert('Plan registrado con exito')</script>";
+                ?>
+                <div class="alert alert-success" role="alert">
+                <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-target="#my-alert" aria-label="Close"></button>
+                Plan registrado con exito!
+                </div>
+                <?php
             }else{
-                echo"<script>alert('Error al registrar el plan')</script>";
+                ?>
+                <div class="alert alert-dismissible alert-danger" role="alert">
+                Error al registrar el plan.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-target="#my-alert" aria-label="Close"></button>
+                </div>
+                <?php
             }
         }
         
@@ -93,8 +114,6 @@
 
   
 
-   
-    <!--
     <div class="form_continer" >
         <h2 class="text-center">Suscripcion</h2>
         <form  method="GET" action="?" >
@@ -124,7 +143,6 @@
             </table>
         </form>
     </div>
-    -->
 
 
 
@@ -193,8 +211,139 @@
         </form>
     </div>
         <br>
+
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col"></div>
+        <div class="col col-lg-6">
+            <form>
+                <div class="mb-3" >
+                    <h2 class="text-center">Nuevo Plan</h2>
+                    <label for="exampleInputEmail1" class="form-label">Plan</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Precio</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Aceptar terminos</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="red" d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM31.1 128H416V448C416 483.3 387.3 512 352 512H95.1C60.65 512 31.1 483.3 31.1 448V128zM111.1 208V432C111.1 440.8 119.2 448 127.1 448C136.8 448 143.1 440.8 143.1 432V208C143.1 199.2 136.8 192 127.1 192C119.2 192 111.1 199.2 111.1 208zM207.1 208V432C207.1 440.8 215.2 448 223.1 448C232.8 448 240 440.8 240 432V208C240 199.2 232.8 192 223.1 192C215.2 192 207.1 199.2 207.1 208zM304 208V432C304 440.8 311.2 448 320 448C328.8 448 336 440.8 336 432V208C336 199.2 328.8 192 320 192C311.2 192 304 199.2 304 208z"/></svg>
+
+
+                </button>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+
+
+
+
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col col-lg-6">
+        <form>
+            <div class="mb-3" >
+                <h2 class="text-center">Nuevo Plan</h2>
+                <label for="exampleInputEmail1" class="form-label">Plan</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Precio</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Aceptar terminos</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+         </form>
+    </div>
+    <div class="col"></div>
+  </div>
+
+  <div class="row">
+    <div class="col"></div>
+    <div class="col col-lg-6">
+        <form>
+            <div class="mb-3" >
+                <h2 class="text-center">Nuevo Plan</h2>
+                <label for="exampleInputEmail1" class="form-label">Plan</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Precio</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Aceptar terminos</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+         </form>
+    </div>
+    <div class="col"></div>
+  </div>
+
+
+
+
+
+
+  <div class="row">
+    <div class="col col-lg-10 offset-lg-1">
+        <table class= "table table-striped table-hover">
+            <thead>
+                <tr>
+                    <td colspan="3">Listado de planes</td>
+                </tr>
+            </thead>
+            
+            <tr>
+
+                <td>PLAN</td>
+                <td>PRECIO</td>
+                <td>Acciomes</td>
+            </tr>
+            <?php 
+
+            
+            while($planes=mysql_fetch_array($query_planes)){
+            ?>
+            <tr>
+                
+                <td><? echo $planes["nombre_plan"]?></td>
+                <td><? echo $planes["precio"]?></td>
+                <td>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM31.1 128H416V448C416 483.3 387.3 512 352 512H95.1C60.65 512 31.1 483.3 31.1 448V128zM111.1 208V432C111.1 440.8 119.2 448 127.1 448C136.8 448 143.1 440.8 143.1 432V208C143.1 199.2 136.8 192 127.1 192C119.2 192 111.1 199.2 111.1 208zM207.1 208V432C207.1 440.8 215.2 448 223.1 448C232.8 448 240 440.8 240 432V208C240 199.2 232.8 192 223.1 192C215.2 192 207.1 199.2 207.1 208zM304 208V432C304 440.8 311.2 448 320 448C328.8 448 336 440.8 336 432V208C336 199.2 328.8 192 320 192C311.2 192 304 199.2 304 208z"/></svg>
+                </td>
+            </tr>
+            <?php 
+
+        } ?>
+            
+        </table>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
     
-        <div class="form_continer" >
+        <!--<div class="form_continer" >
         <h2 class="text-center">Nuevo Plan</h2>
         <form  method="GET" action="?" >
             <table class="form_table" >
@@ -212,7 +361,7 @@
                 </tr>
             </table>
         </form>
-    </div>
+    </div>-->
 
     <div class="columna">
 
@@ -254,39 +403,36 @@
         </table>
     </div>
 
-    <div class="columna">
-        <table class= "table">
-            <thead>
-                <tr>
-                    <td colspan="2">Listado de planes</td>
-                </tr>
-            </thead>
-            
-            <tr>
-
-                <td>PLAN</td>
-                <td>PRECIO</td>
-            </tr>
-            <?php 
-
-            
-            while($planes=mysql_fetch_array($query_planes)){
-            ?>
-            <tr>
-                
-                <td><? echo $planes["nombre_plan"]?></td>
-                <td><? echo $planes["precio"]?></td>
-            </tr>
-            <?php 
-
-        } ?>
-            
-        </table>
-    </div>
 </div>
 
 
   </div>
+
+
+
+
+
+
+  <div class="mb-3">
+  
+</div>
+<div class="mb-3">
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 </body>
 
 
@@ -303,6 +449,6 @@
     }
 
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 </html>
