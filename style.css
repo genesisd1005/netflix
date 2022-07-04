@@ -3,6 +3,10 @@
         
 }
 
+.w-full{
+        width: 100%;
+}
+
 
 .table{border-collapse: collapse; text-align: center;}
         .table 

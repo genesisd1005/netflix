@@ -13,6 +13,8 @@
     <?php 
      error_reporting(E_ALL);
 
+     
+
      $connect=mysql_connect('localhost', 'root', 'genesisdsr2003');
     $db=mysql_select_db('netflix', $connect);
 
@@ -31,13 +33,18 @@
     ?>
 
 
+
 <div class="container">
+
+<?php 
+include("../../comunes/menu.php");
+?>
 <div class="row">
     <div class="col col-lg-10 offset-lg-1">
         <table class= "table table-striped table-hover">
         <thead>
                 <tr>
-                    <td colspan="8">Listado de subscripcion</td>
+                    <td colspan="8">Listado de suscripcion</td>
                 </tr>
             </thead>
              <tr>

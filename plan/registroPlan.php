@@ -51,7 +51,9 @@
 
 
 <div class="container">
-
+<?php 
+include("../comunes/menu.php");
+?>
 <div class="row">
     <div class="col"></div>
     <div class="col col-lg-6">

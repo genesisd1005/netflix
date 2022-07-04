@@ -26,6 +26,9 @@
 
 
 <div class="container">
+<?php 
+include("../comunes/menu.php");
+?>
 <div class="row">
     <div class="col col-lg-10 offset-lg-1">
         <table class= "table table-striped table-hover">
